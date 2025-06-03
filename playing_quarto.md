@@ -1,25 +1,10 @@
----
-title: "Playing with git"
-format: html
-execute:
-  keep-md: true
-editor: visual
----
-
-
+# Playing with git
 
 ## Trying things
 
+Let’s make a graph.
 
-
-
-
-Let's make a graph.
-
-
-::: {.cell}
-
-```{.r .cell-code}
+``` r
 penguins |>
   select(bill_len, bill_dep, island) |>
   na.omit() |>
@@ -34,13 +19,6 @@ penguins |>
   )
 ```
 
-::: {.cell-output .cell-output-stderr}
-```
-`geom_smooth()` using formula = 'y ~ x'
-```
-:::
+    `geom_smooth()` using formula = 'y ~ x'
 
-::: {.cell-output-display}
-![](playing_quarto_files/figure-html/graphity graph graph-1.png){width=672}
-:::
-:::
+![](playing_quarto_files/figure-commonmark/graphity%20graph%20graph-1.png)

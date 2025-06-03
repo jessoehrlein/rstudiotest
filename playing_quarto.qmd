@@ -1,8 +1,6 @@
 ---
 title: "Playing with git"
-format: html
-execute:
-  keep-md: true
+format: gfm
 editor: visual
 ---
 
