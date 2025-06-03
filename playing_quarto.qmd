@@ -1,0 +1,35 @@
+---
+title: "Playing with git"
+format: github_document
+editor: visual
+---
+
+## Trying things
+
+```{r}
+#| label: load packages
+#| include: false
+
+library(tidyverse)
+
+```
+
+Let's make a graph.
+
+```{r}
+#| label: graphity graph graph
+
+penguins |>
+  select(bill_len, bill_dep, island) |>
+  na.omit() |>
+  ggplot() +
+  aes(x = bill_len, y = bill_dep, color = island) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_bw() +
+  labs(
+    x = "Bill length (mm)",
+    y = "Bill depth (mm)"
+  )
+
+```
