@@ -21,4 +21,4 @@ penguins |>
 
     `geom_smooth()` using formula = 'y ~ x'
 
-![](playing_quarto_files/figure-commonmark/graphity%20graph%20graph-1.png)
+![](playing_quarto_files/figure-commonmark/graphity%20graph%20graph-1.svg)
