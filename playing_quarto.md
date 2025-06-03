@@ -6,21 +6,20 @@ execute:
 editor: visual
 ---
 
+
+
 ## Trying things
 
-```{r}
-#| label: load packages
-#| include: false
 
-library(tidyverse)
 
-```
+
 
 Let's make a graph.
 
-```{r}
-#| label: graphity graph graph
 
+::: {.cell}
+
+```{.r .cell-code}
 penguins |>
   select(bill_len, bill_dep, island) |>
   na.omit() |>
@@ -33,5 +32,15 @@ penguins |>
     x = "Bill length (mm)",
     y = "Bill depth (mm)"
   )
-
 ```
+
+::: {.cell-output .cell-output-stderr}
+```
+`geom_smooth()` using formula = 'y ~ x'
+```
+:::
+
+::: {.cell-output-display}
+![](playing_quarto_files/figure-html/graphity graph graph-1.png){width=672}
+:::
+:::
