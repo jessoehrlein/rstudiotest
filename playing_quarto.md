@@ -22,3 +22,21 @@ penguins |>
     `geom_smooth()` using formula = 'y ~ x'
 
 ![](playing_quarto_files/figure-commonmark/graphity%20graph%20graph-1.svg)
+
+``` r
+#label: table!
+
+penguins |>
+  group_by(island) |>
+  summarize(
+          mean_bill_len = mean(bill_len),
+          mean_bill_depth = mean(bill_dep)
+          )
+```
+
+    # A tibble: 3 × 3
+      island    mean_bill_len mean_bill_depth
+      <fct>             <dbl>           <dbl>
+    1 Biscoe             NA              NA  
+    2 Dream              44.2            18.3
+    3 Torgersen          NA              NA  
