@@ -34,3 +34,21 @@ penguins |>
   )
 
 ```
+
+```{r}
+#| label: a different graph
+
+penguins |>
+  select(flipper_len, bill_dep, island) |>
+  na.omit() |>
+  ggplot() +
+  aes(x = flipper_len, y = bill_dep, color = island) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_bw() +
+  labs(
+    x = "Flipper length (mm)",
+    y = "Bill depth (mm)"
+  )
+
+```

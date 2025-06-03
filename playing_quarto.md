@@ -22,3 +22,22 @@ penguins |>
     `geom_smooth()` using formula = 'y ~ x'
 
 ![](playing_quarto_files/figure-commonmark/graphity%20graph%20graph-1.svg)
+
+``` r
+penguins |>
+  select(flipper_len, bill_dep, island) |>
+  na.omit() |>
+  ggplot() +
+  aes(x = flipper_len, y = bill_dep, color = island) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_bw() +
+  labs(
+    x = "Flipper length (mm)",
+    y = "Bill depth (mm)"
+  )
+```
+
+    `geom_smooth()` using formula = 'y ~ x'
+
+![](playing_quarto_files/figure-commonmark/a%20different%20graph-1.svg)
