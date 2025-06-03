@@ -50,5 +50,16 @@ penguins |>
     x = "Flipper length (mm)",
     y = "Bill depth (mm)"
   )
+```
+
+```{r}
+#| label: table!
+
+penguins |>
+  group_by(island) |>
+  summarize(
+          mean_bill_len = mean(bill_len),
+          mean_bill_depth = mean(bill_dep)
+          )
 
 ```
